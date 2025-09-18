@@ -34,6 +34,7 @@ WORKDIR $PYSETUP_PATH
 COPY poetry.lock pyproject.toml ./
 
 RUN poetry install --no-root
+RUN poetry add setuptools
 RUN pip install uvloop 
 
 # Production image
