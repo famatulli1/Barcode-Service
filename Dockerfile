@@ -33,7 +33,7 @@ RUN apt-get update && \
 WORKDIR $PYSETUP_PATH
 COPY poetry.lock pyproject.toml ./
 
-RUN poetry install
+RUN poetry install --no-root
 RUN pip install uvloop 
 
 # Production image
